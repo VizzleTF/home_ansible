@@ -1,3 +1,7 @@
-- name: Upgrading Software
-  expect:
-    command: do-release-upgrade -f DistUpgradeViewNonInteractive
+---
+- hosts: all
+
+  become: true
+  tasks:
+    - name:  Upgrading Software
+      command: do-release-upgrade -f DistUpgradeViewNonInteractive
